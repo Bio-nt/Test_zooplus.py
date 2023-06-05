@@ -22,21 +22,17 @@ def setup():
     driver.quit()
 
 def test_accept_cookies():
-
     core.open()
     time.sleep(2)
     core.click_cookies()
     core.make_screenshot()
 
-
 def test_searching():
-
     core.enter_product()
     time.sleep(2)
     core.make_screenshot()
 
 def test_adding_product_to_cart_1():
-
     core.choosing_product(productnumber)
     time.sleep(1)
     core.make_screenshot()
@@ -44,14 +40,12 @@ def test_adding_product_to_cart_1():
     core.make_screenshot()
 
 def test_deleting_product_from_cart():
-
     core.enter_to_cart()
     time.sleep(3)
     core.make_screenshot()
     core.delete_product(productquantity)
     time.sleep(5)
     core.make_screenshot()
-
 
 if __name__ == '__main__':
     pytest.main(['-v'])
